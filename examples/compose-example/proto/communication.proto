@@ -2,8 +2,13 @@ syntax = "proto3";
 
 package io.github.timortel.kmpgrpc.composeexample.shared;
 
+import "google/api/field_behavior.proto";
+
 message NumMessage {
-  int32 value = 1;
+  int32 value = 1 [
+    (google.api.field_behavior) = INPUT_ONLY,
+    (google.api.field_behavior) = REQUIRED
+  ];
 }
 
 service CommunicationService {
