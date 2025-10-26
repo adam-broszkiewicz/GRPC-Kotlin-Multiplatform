@@ -29,8 +29,8 @@ jobs:
 
       - name: Build Android app
         run: |
-          cd examples/native-integration
-          ./gradlew android:assembleDebug
+          cd examples/compose-example
+          ./gradlew :composeApp:generateKmpGrpcSources
 
   build-ios:
     runs-on: macos-latest
